@@ -44,9 +44,9 @@ void ClientTimer::Merge(ClientTimer timer) {
 
 void ClientTimer::PrintStats() {
 	std::cout << std::fixed << std::setprecision(3);
-	std::cout << sum.count() / op_count << "\t";
-	std::cout << min.count() << "\t";
-	std::cout << max.count() << "\t";
-	std::cout << op_count / elapsed_time.count() * 1000000.0f << std::endl;
+	std::cout << "avg: " <<  sum.count() / op_count << "\t";
+	std::cout << "min: "<<min.count() << "\t";
+	std::cout << "max: "<<max.count() << "\t";
+	std::cout << "throughput: "<< op_count / elapsed_time.count() * 1000000.0f << std::endl;
 }
 

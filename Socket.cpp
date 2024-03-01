@@ -36,7 +36,7 @@ int Socket::Send(char *buffer, int size, int flags) {
 				continue;
 			}
 			*/
-			perror("ERROR: failed to send");
+			// perror("ERROR: failed to send");
 			Close();
 			return 0;
 		}
@@ -59,7 +59,7 @@ int Socket::Recv(char *buffer, int size, int flags) {
 				continue;
 			}
 			*/
-			//perror("ERROR: failed to recv");
+			// perror("ERROR: failed to recv");
 			Close();
 			return 0;
 		}
@@ -93,9 +93,3 @@ void Socket::Close() {
 	//perror("Socket closed");
 	is_initialized_ = false;
 }
-
-
-
-
-
-
